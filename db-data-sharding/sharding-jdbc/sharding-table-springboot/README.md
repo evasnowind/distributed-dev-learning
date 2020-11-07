@@ -1,3 +1,3 @@
 # sharding-table-springboot
 
-只分表，不分库
+不分库，只分表
