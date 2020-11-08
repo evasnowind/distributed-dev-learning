@@ -1,0 +1,49 @@
+server:
+  port: 28081 # 端口
+
+
+
+spring:
+  application:
+    name: order-service
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/xa_order?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: 1qaz@WSX
+
+#  shardingsphere:
+#    datasource:
+#      names: ds0,ds1
+#      ds0:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/xa_order_0
+#        username: root
+#        password: 1qaz@WSX
+#      ds1:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/xa_order_1
+#        username: root
+#        password: 1qaz@WSX
+#    sharding:
+#      default-database-strategy:
+#        inline:
+#          sharding-column: id
+#          algorithm-expression: ds$->{user_id % 2}
+#      tables:
+#        order.actual-data-nodes: ds$->{0..1}.order_$->{0..1}
+#        order.table-strategy.inline.sharding-column: id
+#        order.table-strategy.inline.algorithm-expression: order_$->{id % 2}
+#        order.key-generator.column: id
+#        order.key-generator.type: SNOWFLAKE
+#    props:
+#      sql.show: true
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mappers/**.xml

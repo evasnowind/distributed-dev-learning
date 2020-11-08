@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.prayerlaputa.orderservice.mapper.OrderMapper">
+    
+    <resultMap id="baseResultMap" type="com.prayerlaputa.orderservice.entity.Order">
+        <result column="id" property="id" jdbcType="INTEGER" />
+        <result column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="product_id" property="productId" jdbcType="INTEGER" />
+        <result column="pay_amount" property="payAmount" jdbcType="DECIMAL" />
+        <result column="add_time" property="addTime" jdbcType="DATE" />
+    </resultMap>
+
+
+    <insert id="saveOrder">
+        INSERT INTO `order` (
+           user_id, product_id, pay_amount, add_time
+        )
+        VALUES (
+        #{userId,jdbcType=INTEGER},
+        #{productId,jdbcType=INTEGER},
+        #{payAmount,jdbcType=DECIMAL},
+        #{addTime, jdbcType=DATE}
+        )
+    </insert>
+
+</mapper>

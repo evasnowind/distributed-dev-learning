@@ -1,8 +1,8 @@
 # Order
-DROP DATABASE IF EXISTS seata_order;
-CREATE DATABASE seata_order;
+DROP DATABASE IF EXISTS xa_order;
+CREATE DATABASE xa_order;
 
-CREATE TABLE seata_order.orders
+CREATE TABLE xa_order.orders
 (
     id               INT(11) NOT NULL AUTO_INCREMENT,
     user_id          INT(11)        DEFAULT NULL,
@@ -15,10 +15,10 @@ CREATE TABLE seata_order.orders
 
 
 # Product
-DROP DATABASE IF EXISTS seata_product;
-CREATE DATABASE seata_product;
+DROP DATABASE IF EXISTS xa_product;
+CREATE DATABASE xa_product;
 
-CREATE TABLE seata_product.product
+CREATE TABLE xa_product.product
 (
     id               INT(11) NOT NULL AUTO_INCREMENT,
     stock            INT(11)  DEFAULT NULL,
@@ -26,14 +26,14 @@ CREATE TABLE seata_product.product
     PRIMARY KEY (id)
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;
 
-INSERT INTO seata_product.product (id, stock) VALUES (1, 10); # 插入一条产品的库存
+INSERT INTO xa_product.product (id, stock) VALUES (1, 10); # 插入一条产品的库存
 
 
 # Account
-DROP DATABASE IF EXISTS seata_account;
-CREATE DATABASE seata_account;
+DROP DATABASE IF EXISTS xa_account;
+CREATE DATABASE xa_account;
 
-CREATE TABLE seata_account.account
+CREATE TABLE xa_account.account
 (
     id               INT(11) NOT NULL AUTO_INCREMENT,
     balance          DOUBLE   DEFAULT NULL,
@@ -41,4 +41,4 @@ CREATE TABLE seata_account.account
     PRIMARY KEY (id)
 ) ENGINE = InnoDB AUTO_INCREMENT = 1  DEFAULT CHARSET = utf8;
 
-INSERT INTO seata_account.account (id, balance) VALUES (1, 10);
+INSERT INTO xa_account.account (id, balance) VALUES (1, 10);

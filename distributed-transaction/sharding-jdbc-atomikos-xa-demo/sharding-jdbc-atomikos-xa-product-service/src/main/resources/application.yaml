@@ -1,0 +1,12 @@
+server:
+  port: 28082 # 端口
+
+spring:
+  application:
+    name: product-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/xa_product?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1qaz@WSX

@@ -1,0 +1,12 @@
+server:
+  port: 28083
+
+spring:
+  application:
+    name: account-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/xa_account?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1qaz@WSX

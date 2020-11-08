@@ -1,0 +1,44 @@
+dataSources:
+  # 配置第 1 个数据源
+  ds0: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/xa_order_0?serverTimezone=UTC
+    username: root
+    password: 1qaz@WSX
+  # 配置第 2 个数据源
+  ds1: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/xa_order_1?serverTimezone=UTC
+    username: root
+    password: 1qaz@WSX
+
+rules:
+  # 配置分片规则
+  - !SHARDING
+    tables:
+      # 配置 order 表规则
+      order_t:
+        actualDataNodes: ds${0..1}.order_${0..15}
+        # 配置分库策略
+        databaseStrategy:
+          standard:
+            shardingColumn: user_id
+            shardingAlgorithmName: database_inline
+        # 配置分表策略
+        tableStrategy:
+          standard:
+            shardingColumn: id
+            shardingAlgorithmName: table_inline
+
+    # 配置分片算法
+    shardingAlgorithms:
+      database_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds${user_id % 2}
+      table_inline:
+        type: INLINE
+        props:
+          algorithm-expression: order_${id % 16}
+props:
+  sql-show: true

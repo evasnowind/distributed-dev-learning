@@ -3,13 +3,135 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sharding-jdbc-atomikos-xa-demo</artifactId>
-        <groupId>com.prayerlaputa</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sharding-jdbc-atomikos-xa-order-service</artifactId>
 
+    <properties>
+        <shardingsphere.version>5.0.0-alpha</shardingsphere.version>
+    </properties>
+
+    <dependencies>
+        <!-- 实现对 Spring MVC 的自动化配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 实现对数据库连接池的自动化配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency> <!-- 本示例，我们使用 MySQL -->
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.48</version>
+        </dependency>
+
+        <!-- 实现对 MyBatis 的自动化配置 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+
+        <!-- Apache HttpClient 依赖 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.60</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.4.5</version>
+        </dependency>
+<!--
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.1.1</version>
+&lt;!&ndash;            <version>5.0.0-alpha</version>&ndash;&gt;
+        </dependency>
+        -->
+<!--
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        -->
+
+        <!-- 使用XA事务时，需要引入此模块 -->
+        <!--
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-transaction-core</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-transaction-xa-core</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core</artifactId>
+            <version>${shardingsphere.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-transaction-xa-core</artifactId>
+            <version>${shardingsphere.version}</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-jdbc-core</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; 使用XA事务时，需要引入此模块 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-transaction-xa-core</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+    </dependencies>
 
 </project>
