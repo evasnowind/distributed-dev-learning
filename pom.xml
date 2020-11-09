@@ -14,14 +14,6 @@
         <module>distributed-consensus-algorithm</module>
         <module>db-data-sharding</module>
         <module>distributed-transaction</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-table-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-db-table-read-write-range-group-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-db-table-read-write-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-read-write-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-split-vertically-read-write-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-split-vertically-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-table-read-write-springboot</module>
-        <module>db-data-sharding/sharding-jdbc/sharding-table-spring</module>
     </modules>
 
 
