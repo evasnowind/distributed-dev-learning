@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Premain-Class: com.prayerlaputa.monitor.agent.MyAgent
+Can-Redefine-Classes: true

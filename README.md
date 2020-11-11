@@ -15,7 +15,7 @@
 | netty使用      |                                 |       |
 | RPC            |                                 |       |
 | MQ相关         |                                 |       |
-|                |                                 |       |
+| 分布式链路追踪 | monitor-by-java-agent           | done  |
 
 
 
