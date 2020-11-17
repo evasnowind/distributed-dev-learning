@@ -23,3 +23,8 @@
 如图:  
 ![](java-agent-run-config.png)
 
+## 参考资料    
+- [Java Agent简介](https://www.jianshu.com/p/63c328ca208d)
+- [基于Java Instrument的Agent实现](https://www.jianshu.com/p/b72f66da679f)
+- https://bugstack.cn/itstack/itstack-demo-bytecode.html 
+- https://blog.frognew.com/2016/01/understand-distributed-tracing.html
