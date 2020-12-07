@@ -14,5 +14,6 @@
 
     <modules>
         <module>seata-demo</module>
+        <module>sharding-jdbc-atomikos-xa-demo</module>
     </modules>
 </project>
