@@ -1,7 +1,7 @@
 package com.prayerlaputa.orderservice.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.prayerlaputa.orderservice.dao.OrderDao;
+import com.prayerlaputa.orderservice.mapper.OrderDao;
 import com.prayerlaputa.orderservice.entity.OrderDO;
 import io.seata.core.context.RootContext;
 import io.seata.integration.http.DefaultHttpExecutor;

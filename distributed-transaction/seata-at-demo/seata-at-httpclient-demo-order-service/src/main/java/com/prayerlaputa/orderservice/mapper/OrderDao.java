@@ -1,4 +1,4 @@
-package com.prayerlaputa.orderservice.dao;
+package com.prayerlaputa.orderservice.mapper;
 
 import com.prayerlaputa.orderservice.entity.OrderDO;
 import org.apache.ibatis.annotations.Insert;
