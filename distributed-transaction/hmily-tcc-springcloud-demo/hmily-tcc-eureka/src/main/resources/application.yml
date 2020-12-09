@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    appname: aha-eureka
+    hostname: prayer1.com
+  client:
+    #是否将自己注册到Eureka Server,默认为true，由于当前就是server，故而设置成false，表明该服务不会向eureka注册自己的信息
+    register-with-eureka: false
+    #是否从eureka server获取注册信息，由于单节点，不需要同步其他节点数据，用false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://prayer1.com:8761/eureka/
+
+  server:
+    # 关闭自我保护模式
+    enable-self-preservation: false
+    # 调整失效服务间隔
+    eviction-interval-timer-in-ms: 3000
