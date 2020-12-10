@@ -6,6 +6,7 @@ package com.prayerlaputa.hmily.account.service;
  */
 public interface TccAccountService {
 
+    Integer getBalance(Long userId);
 
     /**
      * 扣除余额

@@ -16,5 +16,6 @@
         <module>seata-at-demo</module>
         <module>sharding-jdbc-atomikos-xa-demo</module>
         <module>hmily-tcc-springcloud-demo</module>
+        <module>hmily-tcc-dubbo-demo</module>
     </modules>
 </project>

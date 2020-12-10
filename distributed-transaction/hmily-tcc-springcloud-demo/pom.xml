@@ -16,6 +16,8 @@
     <modules>
         <module>hmily-tcc-eureka</module>
         <module>hmily-tcc-account-service</module>
+        <module>hmily-tcc-product-service</module>
+        <module>hmily-tcc-order-service</module>
     </modules>
 
 </project>

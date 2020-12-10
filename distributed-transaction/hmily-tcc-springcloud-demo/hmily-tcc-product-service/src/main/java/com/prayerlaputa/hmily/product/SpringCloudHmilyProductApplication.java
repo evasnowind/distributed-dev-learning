@@ -1,4 +1,4 @@
-package com.prayerlaputa.hmily.account;
+package com.prayerlaputa.hmily.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,15 +10,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author chenglong.yu
- * created on 2020/12/9
+ * created on 2020/12/10
  */
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableTransactionManagement
-public class SpringCloudHmilyAccountApplication {
-
+public class SpringCloudHmilyProductApplication {
     public static void main(final String[] args) {
-        SpringApplication.run(SpringCloudHmilyAccountApplication.class, args);
+        SpringApplication.run(SpringCloudHmilyProductApplication.class, args);
     }
 }

@@ -15,7 +15,7 @@ eureka:
     #是否从eureka server获取注册信息，由于单节点，不需要同步其他节点数据，用false
     fetch-registry: false
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       #defaultZone: http://prayer1.com:8761/eureka/
 
   server:

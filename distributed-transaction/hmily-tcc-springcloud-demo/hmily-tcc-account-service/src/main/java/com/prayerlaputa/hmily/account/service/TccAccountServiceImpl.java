@@ -18,6 +18,12 @@ public class TccAccountServiceImpl implements TccAccountService {
     @Autowired
     private TccAccountDao accountDao;
 
+
+    @Override
+    public Integer getBalance(Long userId) {
+        return accountDao.getBalance(userId);
+    }
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void reduceBalance(Long userId, Integer price) throws Exception {

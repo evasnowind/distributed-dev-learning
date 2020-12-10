@@ -1,17 +1,17 @@
 server:
-  port: 28083
+  port: 28082
 #  address: 0.0.0.0
 #  servlet:
-#    context-path: /account-service
+#    context-path: /product-service
 
 spring:
   application:
-    name: account-service
+    name: product-service
   main:
     allow-bean-definition-overriding: true
 
   datasource:
-    url: jdbc:mysql://localhost:3306/tcc_account?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/tcc_product?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 1qaz@WSX
