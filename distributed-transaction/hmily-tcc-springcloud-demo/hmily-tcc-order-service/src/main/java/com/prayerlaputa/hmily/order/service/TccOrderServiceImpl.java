@@ -1,11 +1,12 @@
 package com.prayerlaputa.hmily.order.service;
 
-import com.alibaba.fastjson.JSONObject;
+import com.prayerlaputa.hmily.common.dto.TccAccountReduceBalanceDTO;
+import com.prayerlaputa.hmily.common.dto.TccProductReduceStockDTO;
+import com.prayerlaputa.hmily.order.client.AccountClient;
+import com.prayerlaputa.hmily.order.client.ProductClient;
 import com.prayerlaputa.hmily.order.entity.OrderDO;
 import com.prayerlaputa.hmily.order.mapper.TccOrderDao;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,11 @@ import java.io.IOException;
 @Slf4j
 @Service
 public class TccOrderServiceImpl implements TccOrderService {
+
+    @Autowired
+    private ProductClient productClient;
+    @Autowired
+    private AccountClient accountClient;
 
     @Autowired
     private TccOrderDao orderDao;
@@ -44,31 +50,17 @@ public class TccOrderServiceImpl implements TccOrderService {
     }
 
     private void reduceStock(Long productId, Integer amount) throws IOException {
-//        // 参数拼接
-//        JSONObject params = new JSONObject().fluentPut("productId", String.valueOf(productId))
-//                .fluentPut("amount", String.valueOf(amount));
-//        // 执行调用
-//        HttpResponse response = DefaultHttpExecutor.getInstance().executePost("http://127.0.0.1:28082", "/product/reduce-stock",
-//                params, HttpResponse.class);
-//        // 解析结果
-//        Boolean success = Boolean.valueOf(EntityUtils.toString(response.getEntity()));
-//        if (!success) {
-//            throw new RuntimeException("扣除库存失败");
-//        }
+        TccProductReduceStockDTO stockDTO = new TccProductReduceStockDTO();
+        stockDTO.setProductId(productId);
+        stockDTO.setAmount(amount);
+        productClient.reduceStock(stockDTO);
     }
 
     private void reduceBalance(Long userId, Integer price) throws IOException {
-//        // 参数拼接
-//        JSONObject params = new JSONObject().fluentPut("userId", String.valueOf(userId))
-//                .fluentPut("price", String.valueOf(price));
-//        // 执行调用
-//        HttpResponse response = DefaultHttpExecutor.getInstance().executePost("http://127.0.0.1:28083", "/account/reduce-balance",
-//                params, HttpResponse.class);
-//        // 解析结果
-//        Boolean success = Boolean.valueOf(EntityUtils.toString(response.getEntity()));
-//        if (!success) {
-//            throw new RuntimeException("扣除余额失败");
-//        }
+        TccAccountReduceBalanceDTO accountDto = new TccAccountReduceBalanceDTO();
+        accountDto.setPrice(price);
+        accountDto.setUserId(userId);
+        accountClient.reduceBalance(accountDto);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.prayerlaputa.hmily.product.controller;
 
-import com.prayerlaputa.hmily.product.dto.TccProductReduceStockDTO;
+import com.prayerlaputa.hmily.common.dto.TccProductReduceStockDTO;
 import com.prayerlaputa.hmily.product.service.TccProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

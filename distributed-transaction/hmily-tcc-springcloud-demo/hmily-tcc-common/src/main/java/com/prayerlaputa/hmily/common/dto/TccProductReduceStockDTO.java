@@ -1,4 +1,4 @@
-package com.prayerlaputa.hmily.product.dto;
+package com.prayerlaputa.hmily.common.dto;
 
 /**
  * @author chenglong.yu

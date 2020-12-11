@@ -138,6 +138,12 @@
             <artifactId>spring-test</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.prayerlaputa</groupId>
+            <artifactId>hmily-tcc-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

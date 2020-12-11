@@ -79,7 +79,7 @@ repository:
 metrics:
   metricsName: prometheus
   host:
-  port: 9071
+  port: 9081
   async: true
   threadCount : 16
   jmxConfig:
