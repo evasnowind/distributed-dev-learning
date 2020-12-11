@@ -1,9 +1,10 @@
 package com.prayerlaputa.hmily.order.mapper;
 
-import com.prayerlaputa.hmily.order.entity.OrderDO;
+import com.prayerlaputa.hmily.common.entity.OrderDO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -25,4 +26,13 @@ public interface TccOrderDao {
     @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "id")
     int saveOrder(OrderDO order);
 
+    /**
+     * 更新账单状态
+     *
+     * @param order
+     * @return
+     */
+    @Update("UPDATE orders SET status = #{status} WHERE id = #{id}")
+//    @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "id")
+    int updateStatus(OrderDO order);
 }

@@ -29,16 +29,11 @@ public class TccAccountController {
     }
 
     @PostMapping("/reduce-balance")
-    public Boolean reduceBalance(@RequestBody TccAccountReduceBalanceDTO accountReduceBalanceDTO) {
+    public Boolean reduceBalance(@RequestBody TccAccountReduceBalanceDTO accountReduceBalanceDTO) throws Exception {
         log.info("[reduceBalance] 收到减少余额请求, 用户:{}, 金额:{}", accountReduceBalanceDTO.getUserId(),
                 accountReduceBalanceDTO.getPrice());
-        try {
-            tccAccountService.reduceBalance(accountReduceBalanceDTO.getUserId(), accountReduceBalanceDTO.getPrice());
-            // 正常扣除余额，返回 true
-            return true;
-        } catch (Exception e) {
-            // 失败扣除余额，返回 false
-            return false;
-        }
+        tccAccountService.reduceBalance(accountReduceBalanceDTO);
+        // 正常扣除余额，返回 true
+        return true;
     }
 }

@@ -1,4 +1,4 @@
-package com.prayerlaputa.hmily.order.entity;
+package com.prayerlaputa.hmily.common.entity;
 
 /**
  * @author chenglong.yu
@@ -18,6 +18,8 @@ public class OrderDO {
 
     /** 支付金额 **/
     private Integer payAmount;
+
+    private Integer status;
 
     public Integer getId() {
         return id;
@@ -52,6 +54,15 @@ public class OrderDO {
 
     public OrderDO setPayAmount(Integer payAmount) {
         this.payAmount = payAmount;
+        return this;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public OrderDO setStatus(Integer status) {
+        this.status = status;
         return this;
     }
 }

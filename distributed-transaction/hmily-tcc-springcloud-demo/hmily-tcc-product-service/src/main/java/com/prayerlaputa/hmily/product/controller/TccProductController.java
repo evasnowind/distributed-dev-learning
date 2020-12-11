@@ -19,17 +19,12 @@ public class TccProductController {
     private TccProductService productService;
 
     @PostMapping("/reduce-stock")
-    public Boolean reduceStock(@RequestBody TccProductReduceStockDTO productReduceStockDTO) {
+    public Boolean reduceStock(@RequestBody TccProductReduceStockDTO productReduceStockDTO) throws Exception {
         log.info("[reduceStock] 收到减少库存请求, 商品:{}, 价格:{}", productReduceStockDTO.getProductId(),
                 productReduceStockDTO.getAmount());
-        try {
-            productService.reduceStock(productReduceStockDTO.getProductId(), productReduceStockDTO.getAmount());
-            // 正常扣除库存，返回 true
-            return true;
-        } catch (Exception e) {
-            // 失败扣除库存，返回 false
-            return false;
-        }
+        productService.reduceStock(productReduceStockDTO);
+        // 正常扣除库存，返回 true
+        return true;
     }
 
     @GetMapping("/stock")

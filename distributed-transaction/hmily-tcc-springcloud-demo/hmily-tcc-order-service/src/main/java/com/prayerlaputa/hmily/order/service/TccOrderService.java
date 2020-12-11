@@ -1,5 +1,7 @@
 package com.prayerlaputa.hmily.order.service;
 
+import com.prayerlaputa.hmily.common.enums.OrderStatusEnum;
+
 /**
  * @author chenglong.yu
  * created on 2020/12/10
@@ -13,7 +15,15 @@ public interface TccOrderService {
      * @param productId 产品编号
      * @param price 价格
      * @return 订单编号
-     * @throws Exception 创建订单失败，抛出异常
      */
-    Integer createOrder(Long userId, Long productId, Integer price) throws Exception;
+    Integer createOrder(Long userId, Long productId, Integer price);
+
+    /**
+     * 更新订单状态
+     *
+     * @param orderId
+     * @param status
+     * @return
+     */
+    Integer updateOrderStatus(Integer orderId, Integer status);
 }

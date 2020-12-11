@@ -1,5 +1,7 @@
 package com.prayerlaputa.hmily.account.service;
 
+import com.prayerlaputa.hmily.common.dto.TccAccountReduceBalanceDTO;
+
 /**
  * @author chenglong.yu
  * created on 2020/12/9
@@ -11,9 +13,8 @@ public interface TccAccountService {
     /**
      * 扣除余额
      *
-     * @param userId 用户编号
-     * @param price  扣减金额
-     * @throws Exception 失败时抛出异常
+     * @param accountDto
+     * @return
      */
-    void reduceBalance(Long userId, Integer price) throws Exception;
+    Boolean reduceBalance(TccAccountReduceBalanceDTO accountDto) throws Exception;
 }
