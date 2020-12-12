@@ -4,18 +4,18 @@
 
 各个模块用途如下：
 
-| 技术           | 模块                            | 状态  |
-| -------------- | ------------------------------- | ----- |
-| 一致性哈希算法 | consistent-hash                 | done  |
-| 分布式锁       | distributed-lock                | to do |
-| 分布式事务     | distributed-transaction         | to do |
-| 一致性算法     | distributed-consensus-algorithm | to do |
-| 数据库数据分片 | db-data-sharding                | to do |
-| nginx应用      |                                 |       |
-| netty使用      |                                 |       |
-| RPC            |                                 |       |
-| MQ相关         |                                 |       |
-| 分布式链路追踪 | monitor-by-java-agent           | done  |
+| 技术           | 模块                                                         | 状态  |
+| -------------- | ------------------------------------------------------------ | ----- |
+| 一致性哈希算法 | consistent-hash                                              | done  |
+| 分布式锁       | distributed-lock                                             | to do |
+| 分布式事务     | distributed-transaction                                      | done  |
+| 一致性算法     | distributed-consensus-algorithm                              | to do |
+| 数据库数据分片 | db-data-sharding                                             | done  |
+| nginx应用      |                                                              |       |
+| netty使用      | [使用netty仿写微信IM](https://github.com/evasnowind/netty-im) | done  |
+| RPC            | [rpc-learning](https://github.com/evasnowind/rpc-learning)   | done  |
+| MQ相关         |                                                              |       |
+| 分布式链路追踪 | monitor-by-java-agent                                        | done  |
 
 
 
