@@ -16,6 +16,7 @@
         <module>distributed-transaction</module>
         <module>monitor-by-java-agent</module>
         <module>distributed-id-generator</module>
+        <module>rpc</module>
     </modules>
 
     <properties>
