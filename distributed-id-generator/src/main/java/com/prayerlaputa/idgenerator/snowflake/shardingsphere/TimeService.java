@@ -1,4 +1,4 @@
-package com.prayerlaputa.idgenerator;
+package com.prayerlaputa.idgenerator.snowflake.shardingsphere;
 
 /**
  * @author chenglong.yu

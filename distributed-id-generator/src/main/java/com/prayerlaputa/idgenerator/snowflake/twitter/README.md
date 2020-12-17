@@ -1,0 +1,2 @@
+twitter提供的snowflake原始版本参见
+resources/snowflake-snowflake-2010.zip

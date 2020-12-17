@@ -1,4 +1,4 @@
-package com.prayerlaputa.idgenerator;
+package com.prayerlaputa.idgenerator.snowflake.shardingsphere;
 
 import com.google.common.base.Preconditions;
 import lombok.Getter;
