@@ -1,0 +1,34 @@
+# dubbo 配置项，对应 DubboConfigurationProperties 配置类
+dubbo:
+  # Dubbo 应用配置
+  application:
+    name: user-service-consumer # 应用名
+  # Dubbo 注册中心配置
+  registry:
+    address: nacos://62.234.80.253:8848 # 注册中心地址。个鞥多注册中心，可见 http://dubbo.apache.org/zh-cn/docs/user/references/registry/introduction.html 文档。
+  # Dubbo 消费者配置
+  consumer:
+    timeout: 1000 # 【重要】远程服务调用超时时间，单位：毫秒。默认为 1000 毫秒，胖友可以根据自己业务修改
+    AccountServiceOne:
+      version: 1.0.0
+    AccountServiceTwo:
+      version: 1.0.0
+  # Dubbo 服务提供者配置
+  provider:
+    timeout: 1000 # 【重要】远程服务调用超时时间，单位：毫秒。默认为 1000 毫秒，胖友可以根据自己业务修改
+    AccountServiceTwo:
+      version: 1.0.0
+  # 配置扫描 Dubbo 自定义的 @Service 注解，暴露成 Dubbo 服务提供者
+  scan:
+    base-packages: com.prayerlaputa.dubbo.demo.consumer.service
+  protocol:
+    port: 20881
+
+server:
+  port: 9001
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hmily_fx2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1qaz@WSX

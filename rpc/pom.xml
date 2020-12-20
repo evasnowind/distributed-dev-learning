@@ -13,6 +13,9 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>dubbo-hmily-spring-boot-demo</module>
+    </modules>
 
 
 </project>

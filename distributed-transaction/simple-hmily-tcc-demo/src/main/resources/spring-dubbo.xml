@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="account_service"/>
+
+    <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
+
+    <dubbo:protocol name="dubbo" port="20886"
+                    server="netty" client="netty"
+                    charset="UTF-8" threadpool="fixed" threads="500"
+                    queues="0" buffer="8192" accepts="0" payload="8388608" />
+
+    <dubbo:service interface="com.prayerlaputa.dubbo.demo.service.AccountServiceOne"
+                   ref="account_service_one" executes="20"/>
+
+    <dubbo:service interface="com.prayerlaputa.dubbo.demo.service.AccountServiceTwo"
+                   ref="account_service_two" executes="20"/>
+
+    <dubbo:reference timeout="500000000"
+                     interface="com.prayerlaputa.dubbo.demo.service.AccountServiceOne"
+                     id="account_service_one"
+                     retries="0" check="false" actives="20" loadbalance="hmilyRandom"/>
+    <dubbo:reference timeout="500000000"
+                     interface="com.prayerlaputa.dubbo.demo.service.AccountServiceTwo"
+                     id="account_service_two"
+                     retries="0" check="false" actives="20" loadbalance="hmilyRandom"/>
+
+</beans>

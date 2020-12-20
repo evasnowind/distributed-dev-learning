@@ -16,6 +16,7 @@
 | RPC            | [rpc-learning](https://github.com/evasnowind/rpc-learning)   | done  |
 | MQ相关         |                                                              |       |
 | 分布式链路追踪 | monitor-by-java-agent                                        | done  |
+| 优雅停机       | [Springboot 优雅停止服务的几种方法](https://www.cnblogs.com/huangqingshi/p/11370291.html)   <br/>代码[shutdown demo](https://github.com/evasnowind/shutdowndemo)<br/>[如何做到优雅停机思维导图](docs/如何做到优雅停机.xmind) | done  |
 
 
 
