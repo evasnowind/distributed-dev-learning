@@ -18,6 +18,7 @@
         <module>distributed-id-generator</module>
         <module>rpc</module>
         <module>leader-election</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>
