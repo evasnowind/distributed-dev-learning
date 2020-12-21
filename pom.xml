@@ -19,6 +19,7 @@
         <module>rpc</module>
         <module>leader-election</module>
         <module>api-gateway</module>
+        <module>circuit-breaker</module>
     </modules>
 
     <properties>

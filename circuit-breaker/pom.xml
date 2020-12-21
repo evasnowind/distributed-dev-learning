@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>api-gateway</artifactId>
+    <artifactId>circuit-breaker</artifactId>
+
     <packaging>pom</packaging>
+
     <modules>
-
-        <module>soul-demo</module>
+        <module>sentinel-demo</module>
+        <module>hystrix-demo</module>
     </modules>
-
-
 </project>
