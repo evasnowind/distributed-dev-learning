@@ -18,8 +18,8 @@
 | MQ相关         | [mq-learning](https://github.com/evasnowind/mq-learning)     | done  | 消息队列高手课<br/>作业汇总，常见MQ<br/>使用demo |
 | 分布式链路追踪 | monitor-by-java-agent                                        | done  | 如何自己动手<br/>写一个分布式<br/>链路追踪框架   |
 | 优雅停机       | [Springboot 优雅停止服务的几种方法](https://www.cnblogs.com/huangqingshi/p/11370291.html)   <br/>代码[shutdown demo](https://github.com/evasnowind/shutdowndemo)<br/>[如何做到优雅停机思维导图](docs/如何做到优雅停机.xmind) | done  |                                                  |
-| 断路器         | circuit-breaker                                              | doing | 常见断路器<br/>的使用                            |
-| 网关           | api-gateway                                                  | to do | 常见网关的<br/>使用                              |
+| 断路器         | circuit-breaker                                              | done  | 常见断路器<br/>的使用                            |
+| 网关           | api-gateway                                                  | done  | 常见网关的<br/>使用                              |
 | 分布式缓存     |                                                              |       |                                                  |
 |                |                                                              |       |                                                  |
 
