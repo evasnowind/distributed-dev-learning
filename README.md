@@ -19,7 +19,7 @@
 | 分布式链路追踪 | monitor-by-java-agent                                        | done  | 如何自己动手<br/>写一个分布式<br/>链路追踪框架   |
 | 优雅停机       | [Springboot 优雅停止服务的几种方法](https://www.cnblogs.com/huangqingshi/p/11370291.html)   <br/>代码[shutdown demo](https://github.com/evasnowind/shutdowndemo)<br/>[如何做到优雅停机思维导图](docs/如何做到优雅停机.xmind) | done  |                                                  |
 | 断路器         | circuit-breaker                                              | done  | 常见断路器<br/>的使用                            |
-| 网关           | api-gateway                                                  | done  | 常见网关的<br/>使用                              |
+| 网关           | api-gateway                                                  | doing | 常见网关的<br/>使用                              |
 | 分布式缓存     |                                                              |       |                                                  |
 |                |                                                              |       |                                                  |
 
@@ -32,7 +32,14 @@
 - 分布式缓存相关
   - 比如redis的高级应用、最佳实践、配置等？
 - 高可用
-  - 比如如何给mysql配置HA？
 - nginx使用
   - 如何使用脚本做限流、负载均衡等
 - ......
+
+
+
+## 参考资料  
+
+- [芋道源码](http://www.iocoder.cn/)
+  - 为了节省时间，部分示例直接拷贝了芋道源码 https://github.com/YunaiV/SpringBoot-Labs 中的代码，这样的例子我会在相应文件夹README中注明。芋艿大佬这个库是真的不错，博客文章写的也很清晰，大家可以去围观下。
+
