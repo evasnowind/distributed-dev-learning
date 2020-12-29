@@ -25,3 +25,5 @@ hs_err_pid*
 *.iml
 target/
 .idea/
+
+!distributed-id-generator/src/main/resources/snowflake-snowflake-2010.zip

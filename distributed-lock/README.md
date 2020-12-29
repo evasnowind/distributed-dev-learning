@@ -1,6 +1,7 @@
 ## 演示如何使用分布式锁  
 
 - redis+lua
+    - [X] 使用jedis实现分布式锁
 - redission
     - RLock 比较常用
 - zookeeper原生api
