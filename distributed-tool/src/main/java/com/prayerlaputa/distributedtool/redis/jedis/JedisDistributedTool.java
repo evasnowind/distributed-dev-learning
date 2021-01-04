@@ -1,4 +1,4 @@
-package com.prayerlaputa.distributedlock.redis.jedis;
+package com.prayerlaputa.distributedtool.redis.jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;
@@ -13,6 +13,7 @@ public class JedisDistributedTool {
 
     private static final String LOCK_SUCCESS = "OK";
     private static final Long RELEASE_SUCCESS = 1L;
+    private static final String REDIS_ACK_OK = "OK";
 
     /**
      * 获取分布式锁
@@ -53,5 +54,54 @@ public class JedisDistributedTool {
         }
 
         return false;
+    }
+
+
+    /**
+     * 计数器加1，并且返回加1后的结果
+     *
+     * @param jedis
+     * @param counterKey
+     * @return
+     */
+    public static long incrementAndGetCounter(Jedis jedis, String counterKey) {
+        return jedis.incr(counterKey);
+    }
+
+    /**
+     * 返回当前计数器counterKey的值
+     *
+     * @param jedis
+     * @param counterKey
+     * @return
+     */
+    public static long getCounter(Jedis jedis, String counterKey) {
+        String resStr = jedis.get(counterKey);
+        return Long.parseLong(resStr);
+    }
+
+    /**
+     * 给计数器counterKey加上delta值，并返回增加之后的值
+     *
+     * @param jedis
+     * @param counterKey
+     * @param delta
+     * @return
+     */
+    public static long addAndGetCounter(Jedis jedis, String counterKey, long delta) {
+        return jedis.incrBy(counterKey, delta);
+    }
+
+    public static boolean setCounter(Jedis jedis, String counterKey, long val) {
+        String res = jedis.set(counterKey, String.valueOf(val));
+        if (REDIS_ACK_OK.equals(res)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static long decrementAndGetCounter(Jedis jedis, String counterKey) {
+        return jedis.decr(counterKey);
     }
 }

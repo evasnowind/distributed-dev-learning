@@ -1,6 +1,5 @@
-package com.prayerlaputa.distributedlock.redis.jedis;
+package com.prayerlaputa.distributedtool.redis.jedis;
 
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 

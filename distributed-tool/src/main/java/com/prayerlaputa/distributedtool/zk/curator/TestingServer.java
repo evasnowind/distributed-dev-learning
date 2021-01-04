@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package com.prayerlaputa.distributedlock.zk.curator;
+package com.prayerlaputa.distributedtool.zk.curator;
 
 import org.apache.curator.test.InstanceSpec;
 import org.apache.curator.test.QuorumConfigBuilder;

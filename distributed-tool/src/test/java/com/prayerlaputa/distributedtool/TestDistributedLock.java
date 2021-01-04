@@ -1,7 +1,7 @@
-package com.prayerlaputa.distributedlock;
+package com.prayerlaputa.distributedtool;
 
-import com.prayerlaputa.distributedlock.redis.jedis.JedisDistributedTool;
-import com.prayerlaputa.distributedlock.redis.jedis.JedisPoolUtil;
+import com.prayerlaputa.distributedtool.redis.jedis.JedisDistributedTool;
+import com.prayerlaputa.distributedtool.redis.jedis.JedisPoolUtil;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 

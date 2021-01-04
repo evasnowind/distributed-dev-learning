@@ -1,4 +1,4 @@
-package com.prayerlaputa.distributedlock.zk.api;
+package com.prayerlaputa.distributedtool.zk.api;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;

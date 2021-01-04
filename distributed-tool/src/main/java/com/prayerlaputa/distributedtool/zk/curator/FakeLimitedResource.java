@@ -1,4 +1,4 @@
-package com.prayerlaputa.distributedlock.zk.curator;
+package com.prayerlaputa.distributedtool.zk.curator;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

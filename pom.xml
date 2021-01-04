@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>consistent-hash</module>
-        <module>distributed-lock</module>
+        <module>distributed-tool</module>
         <module>distributed-consensus-algorithm</module>
         <module>db-data-sharding</module>
         <module>distributed-transaction</module>
