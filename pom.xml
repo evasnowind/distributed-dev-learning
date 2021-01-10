@@ -20,6 +20,7 @@
         <module>leader-election</module>
         <module>api-gateway</module>
         <module>circuit-breaker</module>
+        <module>message-queue</module>
     </modules>
 
     <properties>
