@@ -21,6 +21,7 @@
         <module>api-gateway</module>
         <module>circuit-breaker</module>
         <module>message-queue</module>
+        <module>enterprise-information-patterns</module>
     </modules>
 
     <properties>

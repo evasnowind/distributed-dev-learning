@@ -9,11 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>message-queue</artifactId>
+    <artifactId>rule-engine</artifactId>
 
-    <packaging>pom</packaging>
-    <modules>
-        <module>jms-activemq-demo</module>
-        <module>kafka-demo</module>
-    </modules>
+
 </project>
