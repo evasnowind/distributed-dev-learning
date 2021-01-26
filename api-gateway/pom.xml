@@ -13,9 +13,7 @@
     <packaging>pom</packaging>
     <modules>
 
-        <module>soul-demo</module>
+        <module>soul-examples</module>
         <module>spring-cloud-gateway-demo</module>
     </modules>
-
-
 </project>
